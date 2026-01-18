@@ -1,15 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flhensel <flhensel@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/18 12:28:23 by florianh          #+#    #+#             */
-/*   Updated: 2026/01/18 13:55:31 by flhensel         ###   ########.fr       */
+/*   Created: 2026/01/18 12:25:11 by florianh          #+#    #+#             */
+/*   Updated: 2026/01/18 14:03:04 by flhensel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// takes PID and message
-// go through the string bit by bit
-// with PID send Signal for 1 or 0 to server
+#ifndef MINITALK_H
+# define MINITALK_H
+
+# include <unistd.h>
+# include <signal.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <stdarg.h>
+# include <sys/types.h>
+
+int	ft_printf(const char *format, ...);
+
+#endif
