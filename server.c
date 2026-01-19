@@ -6,14 +6,9 @@
 /*   By: flhensel <flhensel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 12:28:16 by florianh          #+#    #+#             */
-/*   Updated: 2026/01/19 12:05:23 by flhensel         ###   ########.fr       */
+/*   Updated: 2026/01/19 12:31:24 by flhensel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// with start prints its PID
-// waits for a signal
-// check what signal we got and add it
-// if we got all 8bits we write and reset for the next set of 8 till we got everything
 
 #include "minitalk.h"
 
@@ -35,7 +30,6 @@ static void handle_signal(int sig)
 
 int main(void)
 {
-    // Implementation of server logic
     pid_t pid = getpid();
 
     ft_printf("Server PID: %d\n", pid);
@@ -43,7 +37,6 @@ int main(void)
     signal(SIGUSR2, handle_signal);
     while (1)
     {
-        pause(); // Wait for signals
-    }
+        pause();
     return 0;
 }

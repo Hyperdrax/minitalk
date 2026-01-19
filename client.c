@@ -6,13 +6,13 @@
 /*   By: flhensel <flhensel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 12:28:23 by flhensel          #+#    #+#             */
-/*   Updated: 2026/01/19 12:12:10 by flhensel         ###   ########.fr       */
+/*   Updated: 2026/01/19 12:30:40 by flhensel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int ft_atoi(const char *str)
+static int ft_atoi(const char *str)
 {
 	int num;
 
@@ -25,7 +25,7 @@ int ft_atoi(const char *str)
 	return (num);
 }
 
-void send_byte(pid_t pid, unsigned char byte)
+static void send_byte(pid_t pid, unsigned char byte)
 {
 	int j;
 
